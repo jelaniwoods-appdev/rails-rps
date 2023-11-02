@@ -7,6 +7,7 @@ tasks:
       if [ -d "/home/gitpod" ]; then
         sudo cp -r /home/student /home/gitpod
         (cd /home/gitpod/student; sudo find . -maxdepth 1 -exec mv {} .. \;)
+        source ~/.bashrc
         sudo chmod 777 /home/gitpod && sudo chown -R gitpod /home/gitpod
         echo "/home/gitpod exists"
       else
